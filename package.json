@@ -22,7 +22,7 @@
   ],
   "devDependencies": {
     "electron": "^7.1.11",
-    "typescript": "^3.7.5"
+    "typescript": "^3.9.7"
   },
   "dependencies": {
     "google-auth-library": "^5.9.2"
