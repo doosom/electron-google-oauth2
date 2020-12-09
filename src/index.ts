@@ -29,7 +29,7 @@ export type ElectronGoogleOAuth2Options = {
 };
 
 export const defaultElectronGoogleOAuth2Options: ElectronGoogleOAuth2Options = {
-  successRedirectURL: 'https://getstation.com/app-login-success/',
+  successRedirectURL: 'https://online.timeqube.com/',
   // can't be randomized
   loopbackInterfaceRedirectionPort: 42813,
   refocusAfterSuccess: true,
@@ -85,6 +85,7 @@ class ElectronGoogleOAuth2 extends EventEmitter {
     let url = this.oauth2Client.generateAuthUrl({
       access_type: 'offline', // 'online' (default) or 'offline' (gets refresh_token)
       scope: this.scopes,
+      prompt: 'consent',
       redirect_uri: `http://127.0.0.1:${this.options.loopbackInterfaceRedirectionPort}/callback`
     });
 
